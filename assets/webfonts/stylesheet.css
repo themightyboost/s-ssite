@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Info Story';
+    src: url('InfoStory.eot');
+    src: url('InfoStory.eot?#iefix') format('embedded-opentype'),
+        url('InfoStory.woff2') format('woff2'),
+        url('InfoStory.woff') format('woff'),
+        url('InfoStory.svg#InfoStory') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('LouisGeorgeCafe.eot');
+    src: url('LouisGeorgeCafe.eot?#iefix') format('embedded-opentype'),
+        url('LouisGeorgeCafe.woff2') format('woff2'),
+        url('LouisGeorgeCafe.woff') format('woff'),
+        url('LouisGeorgeCafe.svg#LouisGeorgeCafe') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Susu Jahe';
+    src: url('SusuJahe.eot');
+    src: url('SusuJahe.eot?#iefix') format('embedded-opentype'),
+        url('SusuJahe.woff2') format('woff2'),
+        url('SusuJahe.woff') format('woff'),
+        url('SusuJahe.svg#SusuJahe') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
