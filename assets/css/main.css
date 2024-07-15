@@ -3922,10 +3922,3 @@ input, select, textarea {
 			display: block;
 			max-width: 100%;
 		}
-
-		@font-face {
-			font-family: 'Louis George Cafe';
-			src: url('assets/webfonts/Louis George Cafe.ttf') format('truetype');
-			font-weight: normal;
-			font-style: normal;
-		}
