@@ -3930,3 +3930,15 @@ input, select, textarea {
 			display: block;
 			max-width: 100%;
 		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #312450; /* Your background color */
+			background-image: url('images/squash.png'); /* Replace with your image path */
+			background-repeat: no-repeat;
+			background-size: auto; /* Adjust based on your image size */
+			background-position: bottom right; /* Align to bottom right */
+			opacity: 0.8; /* Adjust opacity for transparency */
+		}
+		
