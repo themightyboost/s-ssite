@@ -6,12 +6,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-@font-face {
-    font-family: 'Louis George Cafe';
-    src: url('assets/webfonts/Louis George Cafe.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 
 html, body, div, span, applet, object,
@@ -3926,4 +3921,11 @@ input, select, textarea {
 		.image.sidebar-center img {
 			display: block;
 			max-width: 100%;
+		}
+
+		@font-face {
+			font-family: 'Louis George Cafe';
+			src: url('assets/webfonts/Louis George Cafe.ttf') format('truetype');
+			font-weight: normal;
+			font-style: normal;
 		}
