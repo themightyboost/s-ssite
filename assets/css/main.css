@@ -13,12 +13,6 @@
     font-style: normal;
 }
 
-body {
-    font-family: 'Louis George Cafe', Arial, Helvetica, sans-serif; /* Fallback fonts */
-    color: rgba(255, 255, 255, 0.55);
-    font-size: 16.5pt;
-    font-weight: normal;
-    line-height: 1.75;
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
