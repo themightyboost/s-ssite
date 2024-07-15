@@ -11,16 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
+	<style>
         /* Custom CSS for centering image */
-        .image.sidebar-center {
+        .image.sidebar-right {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end; /* Align to the right */
             align-items: center;
-            margin-bottom: 20px; /* Adjust as needed */
+            margin-bottom: 40px; /* Larger gap below the image */
         }
 
-        .image.sidebar-center img {
+        .image.sidebar-right img {
             display: block;
             max-width: 100%;
             height: auto; /* Ensure aspect ratio is maintained */
@@ -32,8 +32,8 @@
 <!-- Sidebar -->
 <section id="sidebar">
     <div class="inner">
-        <a href="#" class="image sidebar-center"><img src="images/sslogo.png" alt="" data-position="center center" /></a>
-        <nav>
+		<a href="#" class="image sidebar-right"><img src="images/sslogo.png" alt="" data-position="center center" /></a>
+	    <nav>
             <ul>
                 <li><a href="#intro">Welcome</a></li>
                 <li><a href="#one">Projects</a></li>
