@@ -106,29 +106,6 @@ input, select, textarea {
 	*, *:before, *:after {
 		box-sizing: inherit;
 	}
-
-	body {
-		position: relative; /* Ensure body is the containing block */
-		background-color: #312450;
-		background-image: url('path/to/your/other/background.png'); /* Your existing background */
-		background-repeat: no-repeat;
-		background-size: cover; /* Adjust as needed */
-		background-position: center; /* Adjust as needed */
-	}
-	
-	body::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		width: 300px; /* Adjust width */
-		height: 150px; /* Adjust height */
-		background-image: url('assets/images/squash.png'); /* Path to your new background image */
-		background-repeat: no-repeat;
-		background-size: 100% 100%; /* Ensure it covers the pseudo-element */
-		opacity: 0.8; /* Adjust opacity for transparency */
-		z-index: 1; /* Ensure it's on top */
-	}
 	
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 		-moz-animation: none !important;
