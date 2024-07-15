@@ -3907,3 +3907,15 @@ input, select, textarea {
 			}
 
 		}
+
+		.image.sidebar-center {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px; /* Adjust the value as needed for the gap */
+		}
+		
+		.image.sidebar-center img {
+			display: block;
+			max-width: 100%;
+		}
