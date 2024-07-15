@@ -6,6 +6,20 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('assets/webfonts/Louis George Cafe.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Louis George Cafe', Arial, Helvetica, sans-serif; /* Fallback fonts */
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 16.5pt;
+    font-weight: normal;
+    line-height: 1.75;
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
