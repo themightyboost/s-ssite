@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Custom CSS for centering image */
-        .image.sidebar-right {
+         /* Custom CSS for centering image */
+         .image.sidebar-right {
             display: flex;
             justify-content: flex-end; /* Align to the right */
             align-items: center;
@@ -26,8 +26,30 @@
             height: auto; /* Ensure aspect ratio is maintained */
         }
 
+        /* Adjusting Image Size for Different Sidebar Behaviors */
+        .image.sidebar-right img {
+            width: 100px; /* Default width */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* When the sidebar is at the top (for medium screens) */
+        @media (max-width: 1024px) {
+            .image.sidebar-right img {
+                width: 80px; /* Adjust width */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+
+        /* When the sidebar is hidden (for small screens or mobile) */
+        @media (max-width: 768px) {
+            .image.sidebar-right img {
+                width: 60px; /* Further adjust width */
+                height: auto; /* Maintain aspect ratio */
+            }
+        }
+
         .special-text {
-            font-family: 'Louis George Cafe', Arial, Helvetica, sans-serif;
+            font-family: 'LouisGeorgeCafe', Arial, Helvetica, sans-serif;
             font-size: 18px; /* Adjust size as needed */
             font-weight: normal;
             line-height: 1.5;
@@ -36,10 +58,10 @@
 
         .special-header-text {
             font-family: 'SusuJahe', Arial, Helvetica, sans-serif;
-            font-size: 18px; /* Adjust size as needed */
+            font-size: 20px; /* Adjust size as needed */
             font-weight: normal;
             line-height: 1.5;
-            color: #ffffff; /* Adjust color as needed */
+            color: #fdffe0; /* Adjust color as needed */
         }
     </style>
 </head>
@@ -48,11 +70,21 @@
 <!-- Sidebar -->
 <section id="sidebar">
     <div class="inner">
-        <a href="#" class="image sidebar-right"><img src="images/sslogo.png" alt="" data-position="center center" /></a>
+        <!-- Using the picture element for responsive images -->
+        <div style="display: flex; justify-content: flex-end;">
+        <picture>
+            <!-- Small viewport image -->
+            <source media="(max-width: 1279.99px)" srcset="images/sslogo-small.png">
+            <!-- Large viewport image -->
+            <source media="(min-width: 1280px)" srcset="images/sslogo-large.png">
+            <!-- Default fallback image for older browsers -->
+            <img src="images/sslogo.png" alt="Logo" class="image sidebar-right">
+        </picture>
+        </div>
         <nav>
             <ul>
                 <li><a href="#intro">Welcome</a></li>
-                <li><a href="#one">Projects</a></li>
+                <li><a href="#one">Games</a></li>
                 <li><a href="#two">About</a></li>
                 <li><a href="#three">Get in touch</a></li>
             </ul>
@@ -65,26 +97,40 @@
 
     <!-- Intro -->
     <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div style="text-align: center;">
+            <!-- Image shown only on viewport width below 737px -->
+            <picture style="display: none;">
+                <source media="(max-width: 736px)" srcset="images/sslogo-mobile.png">
+                <!-- Fallback image for older browsers or larger viewports -->
+                <img src="images/sslogo-mobile.png" alt="Mobile Image">
+            </picture>
+        </div>
         <div class="inner">
             <h1 class="special-header-text">Squash & Stretch</h1>
             <p class="special-text">Developing indie games with a cartoon aesthetic and a passion.</p>
             <ul class="actions">
-                <li><a href="#one" class="button scrolly">Check us out!</a></li>
+                <li><a href="#one" class="button scrolly">Check out our games!</a></li>
             </ul>
         </div>
+        <!-- Semi-transparent image anchored to the bottom right -->
+        <img src="images/squashgif.gif" alt="Semi-transparent Image" style="position: absolute; bottom: 0; right: 0; opacity: 0.3; width: 150px; height: auto;">
     </section>
             
 
     <!-- One -->
     <section id="one" class="wrapper style2 spotlights">
         <section>
-            <a href="#" class="image"><img src="images/rt logo.jpg" alt="" data-position="center center" /></a>
+            <a href="https://store.steampowered.com/app/2723000/Rat_Trap/" class="image"><img src="images/rtlogo.png" alt="" data-position="center center" /></a>
             <div class="content">
                 <div class="inner">
-                    <h2>Rat Trap</h2>
-                    <p>Fuse, Swap and Split to escape! A fast paced, hand-drawn action-adventure involving a rambunctious rat and its multiple mech parts that you can fuse together or split apart at will. Use these powers to explore a mysterious facility, solve puzzles and beat the bad guys! Can you escape the Rat Trap?</p>
+                    <h2>Rat Trap
+                        <ul class="icons solitary-icon">
+                            <a href="https://store.steampowered.com/app/2723000/Rat_Trap/" class="icon brands fa-steam" target="_blank"><span class="label">Steam</span></a>
+                        </ul>
+                    </h2>
+                    <p>Fuse, Swap and Split to escape! A fast paced, hand-drawn action-adventure involving a rambunctious rat and its multiple mech parts that you can fuse together or split apart at will. Use these powers to explore a mysterious facility, solve puzzles and beat the bad guys! Can you escape the Rat Trap?<br><br><i>Currently in development</i>.</p>
                     <ul class="actions">
-                        <li><a href="generic.html" class="button">Learn more</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/1oZwKlV25Qpw-ccD9Dcy6wa6z_g63sVn-?usp=sharing" class="button">Press Kit</a></li>
                     </ul>
                 </div>
             </div>
@@ -119,25 +165,25 @@
     <section id="two" class="wrapper style3 fade-up">
         <div class="inner">
             <h2>About</h2>
-            <p>Squash & Stretch is a small indie studio, hailing from Victoria, Australia. Squash & Stretch is currently deep into the development of its first commercial game 'Rat Trap'.</p>
+            <p>Squash & Stretch is a small indie game development studio hailing from Victoria, Australia. <br>The studio is currently deep into the development of its first commercial game <b>'Rat Trap'.</b></p>
             <div class="features">
                 <section>
-                    <span class="icon solid major fa-code"></span>
+                    <span class="icon solid major fa-palette"></span>
                     <h3>Passion with a purpose</h3>
                     <p>Creating the kinds of games that we would want to play, confident others will love.</p>
                 </section>
                 <section>
-                    <span class="icon solid major fa-lock"></span>
+                    <span class="icon solid major fa-hourglass-half"></span>
                     <h3>Retro meets modern</h3>
                     <p>Utilising inspiration from not only the hits of today, but also from gaming's lucrative past.</p>
                 </section>
                 <section>
-                    <span class="icon solid major fa-cog"></span>
+                    <span class="icon solid major fa-gamepad"></span>
                     <h3>Fun comes first</h3>
                     <p>We strive to deliver authentic and fun-first experiences, without any bloat or fluff that can sometimes get in the way.</p>
                 </section>
                 <section>
-                    <span class="icon solid major fa-desktop"></span>
+                    <span class="icon solid major fa-seedling"></span>
                     <h3>Humble beginnings</h3>
                     <p>The studio began as a solo dev's passion project, and has since gained the aid of other talented creatives along the way.</p>
                 </section>
@@ -175,23 +221,27 @@
                 <section>
                     <ul class="contact">
                         <li>
-                            <h3>Address</h3>
-                            <span>Proudly Supported by ScreenAustralia<br />
-                            Victoria, 3690<br />
+                            <h3>Supported by</h3>
+                            <img src="images/sa.jpg" alt="Supported by image" style="max-width: 220px; height: auto;">
+                        </li>
+                        <li>
+                            <h3>Studio Location</h3>
+                            <span>Wodonga, Victoria<br />
                             Australia</span>
                         </li>
                         <li>
                             <h3>Email</h3>
+                            <span>Contact Beau ↓</span>
                             <a href="#">rattrapbw@gmail.com</a>
                         </li>
                         <li>
                             <h3>Social</h3>
                             <ul class="icons">
-                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                                <li><a href="https://store.steampowered.com/app/2723000/Rat_Trap/" class="icon brands fa-steam" target="_blank"><span class="label">Steam</span></a></li>
+                                <li><a href="https://discord.gg/w4AhYj5g6n" class="icon brands fa-discord"><span class="label">Discord</span></a></li>
+                                <li><a href="https://x.com/RasterRouser" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="https://www.reddit.com/user/rasterRouser/" class="icon brands fa-reddit"><span class="label">Reddit</span></a></li>
+                                
                             </ul>
                         </li>
                     </ul>
@@ -202,14 +252,39 @@
 
 </div>
 
+
 <!-- Footer -->
 <footer id="footer" class="wrapper style1-alt">
     <div class="inner">
         <ul class="menu">
-            <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Squash & Stretch Pty Ltd. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
     </div>
 </footer>
+
+<script>
+    // JavaScript to handle showing/hiding the image based on viewport width
+    window.addEventListener('DOMContentLoaded', function() {
+        var pictureElement = document.querySelector('#intro picture');
+
+        // Check viewport width on page load
+        if (window.innerWidth <= 735) {
+            pictureElement.style.display = 'block'; // Show the picture element
+        } else {
+            pictureElement.style.display = 'none'; // Hide the picture element
+        }
+
+        // Listen for resize events to dynamically adjust visibility
+        window.addEventListener('resize', function() {
+            if (window.innerWidth <= 735) {
+                pictureElement.style.display = 'block'; // Show the picture element
+            } else {
+                pictureElement.style.display = 'none'; // Hide the picture element
+            }
+        });
+    });
+</script>
+
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>

@@ -9,12 +9,27 @@
 /* Define @font-face for your custom fonts */
 @font-face {
     font-family: 'SusuJahe';
-    src: url('assets/webfonts/SusuJahe.woff2') format('woff2'), /* Update path to your font file */
-         url('assets/webfonts/SusuJahe.woff') format('woff'); /* Update path to your font file */
+    src: url('../webfonts/SusuJahe.woff2') format('woff2'), /* Update path to your font file */
+         url('../webfonts/SusuJahe.woff') format('woff'); /* Update path to your font file */
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'LouisGeorgeCafe';
+    src: url('../webfonts/LouisGeorgeCafe.woff2') format('woff2'), /* Update path to your font file */
+         url('../webfonts/LouisGeorgeCafe.woff') format('woff'); /* Update path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas';
+    src: url('../webfonts/Bebas-Regular.woff2') format('woff2'), /* Update path to your font file */
+         url('../webfonts/Bebas-Regular.woff') format('woff'); /* Update path to your font file */
+    font-weight: normal;
+    font-style: normal;
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -128,7 +143,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.55);
-		font-family: 'Louis George Cafe', Arial, Helvetica, sans-serif;
+		font-family: 'LouisGeorgeCafe', Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
@@ -189,7 +204,7 @@ input, select, textarea {
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
 		font-weight: bold;
-		font-family: 'Info Story', Arial, Helvetica, sans-serif;
+		font-family: 'Bebas', Arial, Helvetica, sans-serif;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
 	}
@@ -3022,7 +3037,7 @@ input, select, textarea {
 			border-radius: 0;
 			display: block;
 			position: relative;
-			width: 25em;
+			width: 23em;
 		}
 
 			.spotlights > section > .image img {
@@ -3114,7 +3129,8 @@ input, select, textarea {
 
 				.spotlights > section > .image {
 					width: 100%;
-					height: 50vh;
+					/*height: 50vh;*/
+					min-height: 60em;
 				}
 
 				.spotlights > section > .content {
@@ -3135,7 +3151,9 @@ input, select, textarea {
 
 			.spotlights > section > .image {
 				height: 50vh;
-				min-height: 15em;
+				min-height: 40em;
+				
+				
 			}
 
 			.spotlights > section > .content {
@@ -3580,6 +3598,25 @@ input, select, textarea {
 				height: 100%;
 			}
 
+			/* Default image size */
+
+			/* Adjusting Image Size for Different Sidebar Behaviors */
+
+/* Adjusted CSS to align image to the right and maintain fixed size */
+.image.sidebar-right {
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;
+    margin-bottom: 40px; /* Larger gap below the image */
+}
+
+/* Ensure image size remains fixed */
+.image.sidebar-right img {
+    width: 100px; /* Fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not exceed container width */
+}
+			
 		#sidebar nav > ul {
 			list-style: none;
 			padding: 0;
@@ -3933,14 +3970,10 @@ input, select, textarea {
 			max-width: 100%;
 		}
 
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #312450; /* Your background color */
-			background-image: url('images/squash.png'); /* Replace with your image path */
-			background-repeat: no-repeat;
-			background-size: auto; /* Adjust based on your image size */
-			background-position: bottom right; /* Align to bottom right */
-			opacity: 0.8; /* Adjust opacity for transparency */
-		}
+/* Custom CSS for solitary Steam icon alignment */
+.solitary-icon {
+    display: inline-block; /* Ensure it's inline with text */
+    vertical-align: top; /* Align vertically with adjacent text */
+    margin-left: 10px; /* Adjust spacing as needed */
+}
 		
